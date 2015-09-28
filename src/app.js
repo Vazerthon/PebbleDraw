@@ -3,7 +3,7 @@ var Vector2 = require('vector2');
 
 var x = 0;
 var y = 0;
-var blockSize = 1;
+var blockSize = 5;
 var minX = 0;
 var minY = 0;
 var maxX = 144 - blockSize;
@@ -30,7 +30,7 @@ var draw = function(position){
   } else {
     return;
   }
-  
+
   if (x > maxX) {
     x = maxX;
   }
@@ -39,7 +39,7 @@ var draw = function(position){
   }
   if (x < minX) {
     x = minX;
-  } 
+  }
   if (y < minY) {
     y = minY;
   }
@@ -48,7 +48,7 @@ var draw = function(position){
       size: new Vector2(blockSize, blockSize),
       borderColor: 'clear'
     });
-  
+
   main.add(block);
 };
 
